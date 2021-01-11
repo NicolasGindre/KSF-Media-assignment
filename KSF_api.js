@@ -19,7 +19,7 @@ module.exports = {
 		loginData.token = response.data.token
 		if (loginData != null) {
 			let userUrl = personaUrl +"users/"+ loginData.uuid
-			config = {
+			let config = {
 				headers: {
 					"Authorization": getOAuth(loginData.token)
 				}
@@ -44,7 +44,7 @@ module.exports = {
 
 		return response.data
 	},
-	
+
 	getArticle:  async function(articleUuid, loginUuid, token) {
 		let config = {}
 		if (loginUuid != null && token != null) {

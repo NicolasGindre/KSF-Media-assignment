@@ -9,7 +9,7 @@ app.use(cookieParser())
 const ksfApi = require("./KSF_api")
 
 app.use(express.json())
-app.use('/public', express.static(__dirname + '/public'))
+app.use("/public", express.static(__dirname + "/public"))
 
 app.get("/article/:uuid", async (req, res) => {
 	res.sendFile(path.join(__dirname + "/public/index.html"))

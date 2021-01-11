@@ -1,4 +1,4 @@
-	
+
 function getArticleHtml(articleData) {
 
 	let html = '<div class="col-lg-14 col-md-13 col-sm-20 article-body">'

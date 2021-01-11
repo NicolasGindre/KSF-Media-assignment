@@ -1,5 +1,4 @@
 const apiUrl = "http://127.0.0.1:3000"
-// const apiUrl = "https://reaktor-assignment-warehouse.herokuapp.com/"
 
 function loginOverlayOn() {
 	document.getElementById("login-overlay").style.display = "block"
@@ -36,7 +35,7 @@ async function login(username, password) {
 }
 
 async function logout() {
-	let response = await fetch(apiUrl +"/login/",{
+	await fetch(apiUrl +"/login/",{
 		method: "DELETE"
 	})
 	checkLogin()
@@ -59,7 +58,7 @@ function checkLogin() {
 }
 
 async function fetchArticle() {
-	let articleDataUrl = apiUrl + window.location.pathname.replace(/\/$/, '') +"/data"
+	let articleDataUrl = apiUrl + window.location.pathname.replace(/\/$/, "") +"/data"
 	let response = await fetch(articleDataUrl)
 	if (response.status === 200) {
 		let articleData = await response.json()
