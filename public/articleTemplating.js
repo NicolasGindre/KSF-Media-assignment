@@ -59,7 +59,7 @@ function getArticleHtml(articleData) {
 			html += getBoxHtml(item['box'])
 		}
 	}
-	
+
 	html += getRelatedArticlesHtml(articleData.relatedArticles)
 
 	// End
@@ -111,7 +111,7 @@ function getRelatedArticlesHtml(relatedData) {
 
 	for (let i=0; i<relatedData.length; i++) {
 		let article = relatedData[i]
-		let articleUrl = apiUrl +'article/'+ article.uuid
+		let articleUrl = apiUrl +'/article/'+ article.uuid
 		html += '<div class="ksf-article-element ksf-related-element article-element-extrasmall">'
 		html += '<div class="article-element-textwrap">'
 		html += '<h4><a href="'+ articleUrl +'">'+ article.title +'</a></h4>'

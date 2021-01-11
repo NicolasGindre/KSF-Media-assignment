@@ -1,4 +1,4 @@
-const apiUrl = "http://127.0.0.1:3000/"
+const apiUrl = "http://127.0.0.1:3000"
 // const apiUrl = "https://reaktor-assignment-warehouse.herokuapp.com/"
 
 function loginOverlayOn() {
@@ -20,7 +20,7 @@ document.getElementById("login-btn").addEventListener("click", function (evt) {
 async function login(username, password) {
 	console.log(username)
 	console.log(password)
-	let response = await fetch(apiUrl +"login/",{
+	let response = await fetch(apiUrl +"/login/",{
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -36,7 +36,7 @@ async function login(username, password) {
 }
 
 async function logout() {
-	let response = await fetch(apiUrl +"login/",{
+	let response = await fetch(apiUrl +"/login/",{
 		method: "DELETE"
 	})
 	checkLogin()
@@ -59,8 +59,8 @@ function checkLogin() {
 }
 
 async function fetchArticle() {
-	let articleUuid = window.location.href
-	let response = await fetch(window.location.href +"/data")
+	let articleDataUrl = apiUrl + window.location.pathname.replace(/\/$/, '') +"/data"
+	let response = await fetch(articleDataUrl)
 	if (response.status === 200) {
 		let articleData = await response.json()
 		let html = getArticleHtml(articleData)
