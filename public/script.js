@@ -66,7 +66,9 @@ async function fetchArticle() {
 		let html = getArticleHtml(articleData)
 		document.getElementById("article-container").innerHTML = html
 	} else {
-		document.getElementById("article-container").innerHTML = "Article unavailable."
+		let html = "Article unavailable. Please log in or visit another article."
+		html += " Also you better pay your subscription."
+		document.getElementById("article-container").innerHTML = html
 	}
 }
 
