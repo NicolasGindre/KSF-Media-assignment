@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>KSF-Media assignment</title>
+	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" href="/public/style.css" type="text/css">
+	<link rel="stylesheet" href="/public/main.css" type="text/css">
+	<link rel="stylesheet" href="/public/article.css" type="text/css">
+	<link rel="stylesheet" href="/public/critical.css" type="text/css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type="text/css">
+</head>
+
+<body>
+	<div class="w3-top">
+		<div class="w3-bar w3-black w3-card">
+			<a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+			<div id="logged-out-navbar">
+				<button onclick="loginOverlayOn()" class="w3-padding-large w3-button w3-right">Log In</button>
+			</div>
+			<div id="logged-in-navbar" style="display:none;">
+				<button onclick="logout()" class="w3-padding-large w3-button w3-right">Log Out</button>
+				<a id="first-last-name" class="w3-padding-large w3-right">Hello Mister</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="login-overlay">
+		<div id="login-form">
+			<form>
+				<button type="button" id="cross" onclick="loginOverlayOff()">&cross;</button>
+				<input id="login-username" type="text" placeholder="Username"/>
+				<input id="login-password" type="password" placeholder="Password"/>
+				<input type="submit" value="Log In" id="login-btn"/>
+			</form>
+		</div>
+	</div>
+
+	<div id="article-container" class="article container section-huvudstadsregionen type-nyhet-relaterade">
+	</div>
+
+	<script src="/public/script.js"></script>
+	<script src="/public/articleTemplating.js"></script>
+</body>
+</html>
