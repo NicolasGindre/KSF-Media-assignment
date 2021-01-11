@@ -32,6 +32,7 @@ The dependencies I used are :
  - Express : the most used Node.js framework. I chose it because it is very stable and I know it.
  - Axios : a good HTTP client
  - cookie-parser : required for parsing cookie.
+ - eslint : checks for problems in the code.
 
 I did not use the persona and lettera clients because there was an error when I tried to use them (self is not defined). It was anyway not difficult to make my own api to communicate with these apis.
 
