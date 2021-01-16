@@ -41,8 +41,6 @@ app.post("/login", async (req, res) => {
 		let username = req.body.username
 		let password = req.body.password
 		console.log("Tentative login of user "+ username)
-		// let username = "365-tester@ksfmedia.fi"
-		// let password = "Tester-testingHBL365"
 
 		let loginData = await ksfApi.login(username, password)
 		let maxAge = 365 * 24 * 60 * 60 * 1000
